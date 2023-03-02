@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Portal With Api</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="container mx-auto mt-4 px-20">
+      <div class="navbar bg-base-100 border-b pb-4">
+        <div class="flex-1">
+          <a class="btn btn-primary" href="#">News</a>
+          <a class="text-violet-700 ml-4 font-semibold" href="#">Portal</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="menubar">
+            <ul class="flex mr-6">
+              <li>
+                <a href="#" class="text-violet-700 ml-4 font-semibold">News</a>
+              </li>
+              <li>
+                <a href="#" class="text-slate-600 ml-6 font-semibold">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="./images/Avatar.png" />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="category mt-4">
+        <ul class="flex gap-12" id="category-container">
+          <li>
+            <a href="index.html" class="text-[#858585] font-semibold">Home</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="container mx-auto mt-6 px-20">
+      <div class="py-5 px-3 bg-slate-200">
+        <p>
+          <span id="found-item-show"></span> items found for category
+          Entertainment
+        </p>
+      </div>
+
+      <section class="mt-8">
+        <div class="flex justify-between">
+          <div>
+            <b>Sort By View:</b>
+            <select class="select select-bordered select-sm max-w-xs">
+              <option disabled selected>Small</option>
+              <option>Small Apple</option>
+              <option>Small Orange</option>
+              <option>Small Tomato</option>
+            </select>
+          </div>
+          <div>
+            <button
+              class="bg-[#5D5FEF] border text-white py-2 px-3 rounded-sm"
+              id="todayPick"
+            >
+              Today's Pick
+            </button>
+            <button
+              class="ml-2 py-2 px-3 rounded-sm border border-[#5D5FEF] text-[#5D5FEF]"
+              id="trending-post"
+            >
+              Trending
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-14">
+        <div id="post-container"></div>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
